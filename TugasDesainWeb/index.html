@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="icon-192.png" type="image/png">
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#333333">
+    <title>Home - Website Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: beige;
+        }
+
+        nav {
+            background-color: pink;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: pink;
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        p, ul, ol {
+            width: 80%;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+   
+    <h1>🌐 Selamat Datang di Website Pertama Saya!</h1>
+     <p>
+      Website ini dikembangkan sebagai tugas dari mata kuliah <strong>Desain Web</strong>.  
+      Tujuannya adalah memahami dasar-dasar HTML, CSS, serta penerapan fitur modern seperti <strong>Progressive Web App (PWA)</strong>.
+    </p>
+    <p>
+      Dalam versi PWA, website ini dapat berjalan lebih cepat, disimpan secara lokal, dan diakses walaupun tanpa koneksi internet.  
+      Teknologi ini sangat berguna untuk memberikan pengalaman pengguna yang lebih baik di berbagai perangkat.
+    </p>
+
+    <h3>Apa yang bisa ditemukan di sini?</h3>
+    <ul>
+        <li>Perkenalan singkat tentang website</li>
+        <li>Profil singkat saya</li>
+        <li>Informasi kontak yang bisa dihubungi</li>
+        <li>Apa itu PWA?</li>
+    </ul>
+
+    <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("Service Worker registered"))
+      .catch((err) => console.log("SW registration failed:", err));
+  }
+</script>
+<script>
+  let deferredPrompt;
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    console.log("PWA siap untuk diinstall");
+  });
+</script>
+
+</body>
+</html>

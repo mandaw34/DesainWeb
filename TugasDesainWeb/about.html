@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="icon-192.png" type="image/png">
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#333333">
+    <title>About - Website Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: beige;
+        }
+
+        nav {
+            background-color: pink;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        p, ul, ol {
+            width: 80%;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Isi Halaman -->
+    <h1>👋 Tentang Saya</h1>
+    <p>Halo! Saya Devina Amanda Putri, atau yang biasanya dipanggil Manda</b>. 
+    Saya mahasiswa semester 3 dari jurusan <b>Informatika</b> yang saat ini sedang disibukkan dengan urusan kepanitiaan, organisasi dan tugas-tugas kuliah.
+    Saya memiliki minat pada dunia teknologi, 
+    khususnya <i>pemrograman, desain web, dan pengembangan aplikasi</i>.</p>
+
+
+    <h3>✨ Fun Fact tentang saya:</h3>
+    <ol>
+        <li>Suka melakukan hal apapun sambil denger musik 🎧</li>
+        <li>Hobi main game dan nonton baik itu film ataupun drama korea 🎮🎬</li>
+        <li>Gasuka kopi arabica☕️</li>
+    </ol>
+
+    <h3> PWA apa sih?</h3>
+        <p> PWA atau Progressive web application adalah aplikasi web yang dibangun menggunakan
+            teknologi web seperti HTML, CSS, Javascript. PWA memberikan pengalaman mirip aplikasi asli
+            bagi pengguna, kemampuan untuk di install, bekerja secara offline dan bahkan mengirimkan notifikasi push.</p>
+    <p>
+      Sekarang website ini sudah menjadi <strong>Progressive Web App (PWA)</strong>!  
+      Kamu bisa menambahkannya ke layar utama seperti aplikasi, dan bahkan mengaksesnya <strong>tanpa koneksi internet</strong>.  
+    </p>
+    <p>
+      Dengan teknologi PWA, website ini menjadi lebih cepat, ringan, dan tetap berfungsi walau offline cocok untuk pengguna mobile!
+    </p>
+  </section>
+
+    <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("Service Worker registered"))
+      .catch((err) => console.log("SW registration failed:", err));
+  }
+</script>
+</body>
+</html>
